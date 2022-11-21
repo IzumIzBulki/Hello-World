@@ -1,4 +1,5 @@
-﻿int a = 1;
+﻿Console.Clear();
+int a = 1;
 int d = 2;
 int f = 6;
 int g = 8;

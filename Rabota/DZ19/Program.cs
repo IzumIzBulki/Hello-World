@@ -8,9 +8,9 @@ if (n<9999) Console.Write("Введите 5 значное число");
 else
 if (n>99999) Console.Write("Введите 5 значное число");
 else
-if ((n / 10000) % 10 == n  % 10 && (n / 1000) % 10 == (n/10)  % 10) Console.Write("monogam");
+if ((n / 10000) % 10 == n  % 10 && (n / 1000) % 10 == (n/10)  % 10) Console.Write("palindrome");
 else
-    Console.Write("DontMonogam");
+    Console.Write("NotPalindrome");
 
 
 // Task 19 v.2
@@ -30,7 +30,8 @@ while (n>99)
 while (n>9)
     n /=10;
     n22 = n;
-if (n1%10 == n11%10 && n22%10 == n2) Console.Write("monogam");
+if (n1%10 == n11%10 && n22%10 == n2) Console.Write("palindrome");
 else
-    Console.Write("DontMonogam");
+    Console.Write("NotPalindrome");
 }
+

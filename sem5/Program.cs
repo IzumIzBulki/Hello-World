@@ -114,29 +114,29 @@
 // task 37v1
 
 
-void InputArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-        array[i] = new Random().Next(1, 11); // [1, 10]
-}
+// void InputArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//         array[i] = new Random().Next(1, 11); // [1, 10]
+// }
 
 
-void ReleaseArray(int[] array)
-{
-    int[] resultArray = new int[array.Length / 2 + array.Length % 2];
-    for (int i = 0; i < array.Length / 2 + array.Length % 2; i++)
-        resultArray[i] = array[i] * array[array.Length - i - 1];
-    Console.WriteLine($"[{string.Join(", ", resultArray)}]");
-}
+// void ReleaseArray(int[] array)
+// {
+//     int[] resultArray = new int[array.Length / 2 + array.Length % 2];
+//     for (int i = 0; i < array.Length / 2 + array.Length % 2; i++)
+//         resultArray[i] = array[i] * array[array.Length - i - 1];
+//     Console.WriteLine($"[{string.Join(", ", resultArray)}]");
+// }
 
 
-Console.Clear();
-Console.Write("Введите кол-во элементов массива: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[n];
-InputArray(array);
-Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
-ReleaseArray(array);
+// Console.Clear();
+// Console.Write("Введите кол-во элементов массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// InputArray(array);
+// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+// ReleaseArray(array);
 
 
 // task 37v2

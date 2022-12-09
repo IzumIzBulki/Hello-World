@@ -3,14 +3,14 @@
 Console.Clear();
 
 int n = Convert.ToInt32(Console.ReadLine());
-int[] massiv = new int[n];
-int min = n+1;
-int max = 0;
+Double[] massiv = new Double[n];
+Double min = n+1;
+Double max = 0;
 
 
 for (int i = 0; i <= massiv.Length-1; i++)
 {
-    massiv[i] = new Random().Next(1, n+1);
+    massiv[i] = Math.Round(Convert.ToDouble(new Random().NextDouble())*10, 2);
     if(min > massiv[i])
         min = massiv[i];
     else
@@ -18,5 +18,5 @@ for (int i = 0; i <= massiv.Length-1; i++)
         max = massiv[i];
 }
 
-Console.WriteLine($"[{String.Join(", ", massiv)}]");
-Console.WriteLine(max - min);
+Console.WriteLine($"[{String.Join(" | ", massiv)}]");
+Console.WriteLine(Math.Round(max - min, 2));

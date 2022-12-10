@@ -1,6 +1,6 @@
 ﻿// // Dop1
 
-Console.Clear();
+// Console.Clear();
 
 // int n = Convert.ToInt32(Console.ReadLine());
 
@@ -35,7 +35,8 @@ Console.Clear();
 int n = Convert.ToInt32(Console.ReadLine());
 
 
-
+int search(int i)
+{
 for (int i = 4; i <= n; i++)  // 10
 {
     int count = 0;
@@ -46,8 +47,9 @@ for (int i = 4; i <= n; i++)  // 10
     if (count <= 2 )
         {
             Console.WriteLine($"{i}");
-            return;
+            return i;
         }
+}
 }
 
 

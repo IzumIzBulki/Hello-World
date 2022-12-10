@@ -25,7 +25,7 @@
 //                     }
 //                 }
 //         }
-            
+
 //     }
 //     n1++;
 //     n2--;
@@ -37,19 +37,19 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 int search(int i)
 {
-for (int i = 4; i <= n; i++)  // 10
-{
-    int count = 0;
-    for (int j = 1; j <= i; j++)
+    for (int i = 4; i <= n; i++)  // 10
     {
-        if (i % j == 0)  count++; //1 2 
-    }
-    if (count <= 2 )
+        int count = 0;
+        for (int j = 1; j <= i; j++)
+        {
+            if (i % j == 0) count++; //1 2 
+        }
+        if (count <= 2)
         {
             Console.WriteLine($"{i}");
             return i;
         }
-}
+    }
 }
 
 // for (int a = n; a >= 4; a--)  

@@ -12,4 +12,4 @@ for (int i = 0; i <= massiv.Length - 1; i++)
     if (massiv[i] % 2 == 0) summ++;
 }
 Console.WriteLine($"[{String.Join(", ", massiv)}]");
-Console.WriteLine($"Колличество цифр, кратных двум: {summ}");
+Console.WriteLine($"Колличество четных цифр: {summ}");

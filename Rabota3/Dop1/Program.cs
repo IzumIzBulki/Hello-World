@@ -1,36 +1,36 @@
 ﻿// Dop1
 
-Console.Clear();
+// Console.Clear();
 
-int n = Convert.ToInt32(Console.ReadLine());
+// int n = Convert.ToInt32(Console.ReadLine());
 
-int n1 = n / 2;
-int n2 = n - n1;
-int division = 0;
-Console.WriteLine($"{n2} ^ {n1}");
-for (int i = 0; i <= n / 2 ; i++)
-{
-    division = 0;
-    for (int j = 2; j <= n/2+1; j++)
-    {
-        if (n1 % j != 0 && n2 % j != 0  )
-        {
-            division++;
-                if (division == n/2-1)
-                {
-                    if (n1 == 2 || n1 == 3 || n1 == 5 || n1 % 3 != 0 )
-                    {
-                        Console.WriteLine($"{n2} и {n1}");
-                        return;
-                    }
-                
-                }
-        }
+// int n1 = n / 2;
+// int n2 = n - n1;
+// int division = 0;
+// Console.WriteLine($"{n2} ^ {n1}");
+// for (int i = 0; i <= n / 2 ; i++)
+// {
+//     division = 0;
+//     for (int j = 2; j <= n/2+1; j++)
+//     {
+//         if (n1 % j != 0 && n2 % j != 0  )
+//         {
+//             division++;
+//                 if (division == n/2-1)
+//                 {
+//                     if (n1 == 2 || n1 == 3 || n1 == 5 || n1 % 3 != 0 )
+//                     {
+//                         Console.WriteLine($"{n2} и {n1}");
+//                         return;
+//                     }
 
-    }
-    n1++;
-    n2--;
-}
+//                 }
+//         }
+
+//     }
+//     n1++;
+//     n2--;
+// }
 
 
 
@@ -78,5 +78,24 @@ for (int i = 0; i <= n / 2 ; i++)
 
 
 
+public static class Task0323
+{
+    public static void Main()
+    {GetInputData(out var n);
+    var result = Solve(n);
+    PrintResult(n, result);}
+
+    private static void GetInputData(out int n){n = int.Parse(Console.ReadLine());}
+
+    public static int Solve(int n)
+    {for (var i = 2; i <= n / 2; i++){if (IsPrime(i) && IsPrime(n - i)) return i;}
+    return 0;}
+
+    private static void PrintResult(int n, int p){Console.WriteLine($"{p} {n - p}");}
+
+    private static bool IsPrime(int n)
+    {for (var i = 2; i <= Math.Sqrt(n); i++) if (n % i == 0) return false;
+    return true;}
+}
 
 

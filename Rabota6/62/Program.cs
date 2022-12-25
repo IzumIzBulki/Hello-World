@@ -1,32 +1,31 @@
-﻿// Задача 62.Напишите программу, которая заполнит спирально массив 4 на 4.
-// Например, на выходе получается вот такой массив:
-// 01 02 03 04
-// 12 13 14 05
-// 11 16 15 06
-// 10 09 08 07
+﻿Console.Write("Введите размер матрицы: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] matrix = new int[n, n];
+int j = 0;
+int f = 0;
 
-
-// 62
-
-Console.Clear();
-
-int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
-int[,] Matrix = new int[size[0], size[1]];
-int n = 1;
-
-void FillMatrix(int[,] Matrix)
+void FillMatrix(int[,] matrix)
 {
-    for (int i = Matrix.GetLength(0); 0 < i; i--)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int g = 0; g < Matrix.GetLength(1); g++)
-        {
-            Matrix[i, g] = n;
-            Console.Write($"{Matrix[i, g]}\t");
-            n++;
-        }
-       Console.WriteLine(); 
+        for (int f = 0; f < matrix.GetLength(1); f++) Console.Write($"{matrix[i, f]}\t");
+        Console.WriteLine();
     }
-    
 }
 
-FillMatrix(Matrix);
+void CreateMatrix(int[,] matrix)
+{
+
+    for (int i = 1; i <= matrix.GetLength(0) * matrix.GetLength(1); i++)
+    {
+        matrix[j, f] = i;
+        if (j <= f + 1 && j + f < matrix.GetLength(1) - 1) f++;
+        else if (j < f && j + f >= matrix.GetLength(1) - 1) j++;
+        else if (j + 1 >= f && j + f > matrix.GetLength(1) - 1) f--;
+        else j--;
+    }
+}
+
+
+CreateMatrix(matrix);
+FillMatrix(matrix);
